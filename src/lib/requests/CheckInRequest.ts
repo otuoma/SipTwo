@@ -36,7 +36,7 @@ export class CheckInRequest extends RequestMessage {
     }
     this.append('|BI');
     this.append(cancel ? 'Y' : 'N');
-    if (this.commonRequestDto.patronCredentials.password) {
+    if (this.commonRequestDto.patronCredentials && this.commonRequestDto.patronCredentials.password) {
       this.append('|AD');
       this.append(this.commonRequestDto.patronCredentials.password);
     }
