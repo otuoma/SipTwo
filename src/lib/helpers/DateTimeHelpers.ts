@@ -1,7 +1,7 @@
 import date from 'date-and-time';
 
 export const formatSipRequestDateTime = (request_date: Date = new Date()) => {
-  return date.format(request_date, 'yyyymmdd    HHMMss');
+  return date.format(request_date, 'YYYYMMDD    HHMMss');
 };
 
 export const parseSipResponseDateTime = (value: string) => {
